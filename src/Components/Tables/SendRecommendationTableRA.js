@@ -1,23 +1,19 @@
 import React from "react";
 import EditIcon from "@mui/icons-material/Edit";
 
-function SendRecommendationTable() {
+function SendRecommendationTableRA() {
   const clients = [
     {
       name: "RELIANCE.NS",
-      id: "2",
     },
     {
       name: "INFY.NS",
-      id: "3",
     },
     {
       name: "TCS.NS",
-      id: "5",
     },
     {
       name: "DEEPAKNTR.NS",
-      id: "7",
     },
   ];
 
@@ -28,7 +24,7 @@ function SendRecommendationTable() {
           <thead>
             <tr>
               <th style={{ width: "90px", textAlign: "center" }}>Sl.no.</th>
-              <th>Stack name</th>
+              <th>Stock name</th>
               <th>QTY(assuming total investment of 200,000)</th>
               <th>Thematic tag,if any(optional)</th>
               <th>
@@ -51,9 +47,9 @@ function SendRecommendationTable() {
                 </td>
                 <td>
                   <span style={{ display: "flex", alignItems: "center" }}>
-                    <p
-                      style={{ marginLeft: "10px", marginBottom: "0" }}
-                    >{`${client.id}`}</p>
+                    <p style={{ marginLeft: "10px", marginBottom: "0" }}>
+                      equal allocation*
+                    </p>
                   </span>
                 </td>
                 <td>
@@ -70,4 +66,4 @@ function SendRecommendationTable() {
     </>
   );
 }
-export default SendRecommendationTable;
+export default SendRecommendationTableRA;
