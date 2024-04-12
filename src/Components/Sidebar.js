@@ -39,7 +39,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/sendrecommendations">
             <Button className="w-100" variant="extendedFab">
               <span className="icon">
                 <FaRegCircleCheck></FaRegCircleCheck>

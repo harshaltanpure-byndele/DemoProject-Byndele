@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import ClientList from "./Pages/ClientList";
 import Sidebar from "./Components/Sidebar";
+import SendRecommendations from "./Pages/SendRecommendations";
 
 function App() {
   return (
@@ -21,6 +22,11 @@ function App() {
               path="/clientlist"
               exact={true}
               element={<ClientList></ClientList>}
+            ></Route>
+            <Route
+              path="/sendrecommendations"
+              exact={true}
+              element={<SendRecommendations></SendRecommendations>}
             ></Route>
           </Routes>
         </div>

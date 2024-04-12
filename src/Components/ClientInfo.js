@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Client from './Tables/ClientDetailTable';
 
 const ClientInfo = () => {
   const [activeTab, setActiveTab] = useState('button1');
@@ -29,9 +29,11 @@ const ClientInfo = () => {
       <div className="row mt-3">
         <div className="col">
           <div className={`content ${activeTab === 'button1' ? '' : 'd-none'}`}>
-            Content for Div 1
+          <div>  <Client></Client></div>
           </div>
           <div className={`content ${activeTab === 'button2' ? '' : 'd-none'}`}>
+
+            //Client connfidential details table should be place here
             Content for Div 2
           </div>
         </div>
