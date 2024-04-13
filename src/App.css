@@ -298,6 +298,7 @@ header {
 
 /*--------------------------------------------------------------------------*/
 /*ClientDetails Table*/
+.recc{margin-top: 0px !important;}
 
 .client-table {
   border-collapse: collapse;
@@ -443,7 +444,7 @@ Styles for content .content {
   padding: 1px;
 }
 .send-recomm-details {
-  margin-top: 250px;
+  margin-top: 43px;
 }
 .recomm-table {
   border-collapse: collapse;
@@ -478,4 +479,35 @@ Styles for content .content {
 .advisortag {
   margin-left: 10px;
   text-align: center;
+}
+/*----------------------------------------------------*/
+/*postreccButton
+
+
+/* Container styling */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+/* Button styling */
+.button-style {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 7px;
+  background-color: #f0f0f0; /* light gray background */
+  cursor: pointer;
+  width: fit-content; /* button width adapts to text size */
+  font-size: 16px;
+  text-align: left; /* text starts from the left side */
+}
+
+/* Styling for selected button */
+.button-selected {
+  background-color: #834ff0; /* blue background for selected button */
+  color: white; /* white text for selected button */
 }

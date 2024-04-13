@@ -3,6 +3,8 @@ import { FaList } from "react-icons/fa";
 import { MdOutlineDashboard } from "react-icons/md";
 import DropdownComponent from "./DropDownLIst/DropDown";
 import SendRecommendationTable from "../Tables/SendRecommendationTable";
+import PostReccoButton from "../PostReccoButtons";
+
 
 const RIAScreen = () => {
   return (
@@ -35,10 +37,14 @@ const RIAScreen = () => {
           </div>
 
         </div>
-        <div className="row recc">
-           
-            <SendRecommendationTable></SendRecommendationTable>
-            
+        <div className="row recc"> 
+          <div className="col">
+          <SendRecommendationTable></SendRecommendationTable>
+          </div>  
+        </div>
+        <div className="row">
+
+          <PostReccoButton></PostReccoButton>
         </div>
       </div>
     </>

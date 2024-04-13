@@ -10,6 +10,13 @@ const SendRecommendations = () => {
         <div className="row">
           <ScreenRIA></ScreenRIA>
         </div>
+        <div className="row">
+
+
+
+
+          
+        </div>
       </div>
     </>
   );
