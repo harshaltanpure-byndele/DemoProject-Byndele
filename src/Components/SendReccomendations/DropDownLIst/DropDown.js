@@ -1,60 +1,51 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FaChevronDown } from 'react-icons/fa';
+import React, { useState } from "react";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
+function DropdownComponent() {
+  const [isOpenSelect, setIsOpenSelect] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-const DropdownComponent = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState('Select All Lists for Trade and Recommendations');
-  const dropdownRef = useRef(null);
-
-  const handleOptionClick = (option) => {
-    setSelectedOption(option);
-    setDropdownOpen(false);
+  const openSelect = () => {
+    setIsOpenSelect(!isOpenSelect);
   };
 
-  // Handle click outside of the dropdown
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
-  const options = [
-    'Select All Lists for Trade and Recommendations',
-    'Select Only Hidden Lists',
-    'Select Archived Lists',
-  ];
+  const closeSelect = (index) => {
+    setSelectedIndex(index);
+    setIsOpenSelect(false);
+  };
 
   return (
-    <div className="dropdown" ref={dropdownRef}>
-      {/* Dropdown list */}
-      <div className="dropdown-list" onClick={() => setDropdownOpen(!dropdownOpen)}>
-        <span>{selectedOption}</span>
-        <FaChevronDown />
-      </div>
-
-      {/* Dropdown menu */}
-      {dropdownOpen && (
-        <div className="dropdown-menu">
-          {options.map((option) => (
-            <div
-              key={option}
-              className="dropdown-item"
-              onClick={() => handleOptionClick(option)}
+    <div className="selectDropWrapper position-relative">
+      <span className="openSelect" onClick={openSelect}>
+        Select All Lists for Trade and Recommendations
+        <KeyboardArrowDownIcon style={{ paddingLeft: 8, fontSize: 30 }} />
+      </span>
+      {isOpenSelect && (
+        <div className="selectDrop">
+          <ul className="searchResult">
+            <li
+              onClick={() => closeSelect(0)}
+              className={`${selectedIndex === 0 ? "active" : ""}`}
             >
-              {option}
-            </div>
-          ))}
+              Select All Lists for Trade and Recommendations
+            </li>
+            <li
+              onClick={() => closeSelect(1)}
+              className={`${selectedIndex === 1 ? "active" : ""}`}
+            >
+              Select Only Hidden Lists
+            </li>
+            <li
+              onClick={() => closeSelect(2)}
+              className={`${selectedIndex === 2 ? "active" : ""}`}
+            >
+              Select Archived Lists
+            </li>
+          </ul>
         </div>
       )}
     </div>
   );
-};
+}
 
 export default DropdownComponent;

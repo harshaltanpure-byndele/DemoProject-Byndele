@@ -56,7 +56,9 @@ function SendRecommendationTableRA() {
                   <div className="advisortag">New Tag</div>
                 </td>
                 <td>
-                  <EditIcon className="editcon" />
+                  <button className="sendrecomm-edit-button">
+                    <EditIcon className="sendrecomm-editcon" />
+                  </button>
                 </td>
               </tr>
             ))}

@@ -482,6 +482,21 @@ Styles for content .content {
   margin-left: 10px;
   text-align: center;
 }
+.sendrecomm-edit-button {
+  border: none;
+  background: white;
+}
+.sendrecomm-editcon {
+  margin-left: 105px;
+  color: rgb(85, 85, 86);
+  font-size: 19px;
+  opacity: 0.5;
+}
+
+.sendrecomm-editcon:active {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
 /*----------------------------------------------------*/
 /*postreccButton
 
@@ -619,4 +634,43 @@ Styles for content .content {
 
 .portfolio-table th {
   background-color: #f2f2f2;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* DropdownnList */
+
+.selectDrop {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 40%;
+  z-index: 1000;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 3px 6px rgba(0 0 0/20%);
+}
+
+.selectDrop .searchResult li {
+  list-style: none;
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  margin-left: -10%;
+}
+
+.selectDrop .searchResult li:hover {
+  background: #7ab99d;
+}
+.selectDrop .searchResult li:active {
+  background: #ccc;
+}
+.selectDropWrapper .openSelect {
+  margin-top: 20px;
+  display: block;
+  padding: -5px 0px;
+  padding-left: 10px;
+  border: 1px solid black;
+  width: 40%;
+  border-radius: 5px;
+  cursor: pointer;
 }

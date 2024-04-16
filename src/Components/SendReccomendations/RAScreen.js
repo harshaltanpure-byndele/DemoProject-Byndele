@@ -1,14 +1,14 @@
-
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { FaList } from "react-icons/fa";
 import { MdOutlineDashboard } from "react-icons/md";
 import DropdownComponent from "./DropDownLIst/DropDown";
 import SendRecommendationTableRA from "../Tables/SendRecommendationTableRA";
 import PostReccoButton from "../PostReccoButtons";
+
 const RAScreen = () => {
   return (
     <>
-        <div className="containerr-fluid">
+      <div className="containerr-fluid">
         <div className="row data">
           <div className="col d-flex justify-content-between align-items-center">
             <div className="col-auto">
@@ -20,6 +20,7 @@ const RAScreen = () => {
                 />
               </span>
             </div>
+
             <div className="col-auto d-flex align-items-center">
               <div className="listICON1 position-relative d-flex align-items-center">
                 <FaList></FaList>
@@ -30,19 +31,18 @@ const RAScreen = () => {
             </div>
           </div>
         </div>
+
         <div className="row">
           <div className="col">
             <DropdownComponent></DropdownComponent>
           </div>
-
         </div>
-        <div className="row recc"> 
+        <div className="row recc">
           <div className="col">
-         <SendRecommendationTableRA></SendRecommendationTableRA>
-          </div>  
+            <SendRecommendationTableRA></SendRecommendationTableRA>
+          </div>
         </div>
         <div className="row">
-
           <PostReccoButton></PostReccoButton>
         </div>
       </div>
