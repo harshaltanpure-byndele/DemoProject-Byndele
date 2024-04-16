@@ -1,7 +1,7 @@
 import React from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-function HistoricalRecosTable() {
+function HistRecosTableByDate() {
   const clients = [
     {
       name: "RELIANCE.NS",
@@ -155,4 +155,4 @@ function HistoricalRecosTable() {
     </>
   );
 }
-export default HistoricalRecosTable;
+export default HistRecosTableByDate;
