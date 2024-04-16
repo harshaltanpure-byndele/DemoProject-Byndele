@@ -5,7 +5,7 @@ import { MdOutlineDashboard } from "react-icons/md";
 import DropdownComponent from "./DropDownLIst/DropDown";
 import SendRecommendationTableRA from "../Tables/SendRecommendationTableRA";
 import PostReccoButton from "../PostReccoButtons";
-const RAScreen = () => {
+const RAScreen = ({handleShowRecommStatus}) => {
   return (
     <>
         <div className="containerr-fluid">
@@ -43,7 +43,7 @@ const RAScreen = () => {
         </div>
         <div className="row">
 
-          <PostReccoButton></PostReccoButton>
+          <PostReccoButton  onButtonClick={handleShowRecommStatus}></PostReccoButton>
         </div>
       </div>
     </>

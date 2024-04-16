@@ -6,6 +6,7 @@ import Header from "./Components/Header";
 import ClientList from "./Pages/ClientList";
 import Sidebar from "./Components/Sidebar";
 import SendRecommendations from "./Pages/SendRecommendations";
+import HistoricalRecos from "./Pages/HistoricalRecos";
 
 function App() {
   return (
@@ -27,6 +28,11 @@ function App() {
               path="/sendrecommendations"
               exact={true}
               element={<SendRecommendations></SendRecommendations>}
+            ></Route>
+             <Route
+              path="/historicalrecos"
+              exact={true}
+              element={<HistoricalRecos></HistoricalRecos>}
             ></Route>
           </Routes>
         </div>

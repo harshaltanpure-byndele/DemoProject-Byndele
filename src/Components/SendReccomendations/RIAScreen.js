@@ -6,7 +6,7 @@ import SendRecommendationTable from "../Tables/SendRecommendationTable";
 import PostReccoButton from "../PostReccoButtons";
 
 
-const RIAScreen = () => {
+const RIAScreen = ( {handleShowRecommStatus}) => {
   return (
     <>
       <div className="containerr-fluid">
@@ -44,7 +44,7 @@ const RIAScreen = () => {
         </div>
         <div className="row">
 
-          <PostReccoButton></PostReccoButton>
+          <PostReccoButton onButtonClick={handleShowRecommStatus}></PostReccoButton>
         </div>
       </div>
     </>

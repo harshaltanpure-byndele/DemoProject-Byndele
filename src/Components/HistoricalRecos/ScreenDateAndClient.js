@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import RIAScreen from "./RIAScreen";
-import RAScreen from "./RAScreen";
+import HtRecByDate from "./HtRecByDate";
+import HtRecByDateAndRange from "./HtRecByClientAndRange";
 
-const ScreenRIA = ({ handleShowRecommStatus }) => {
+
+const ScreenDateAndClient= ({ handleShowRecommStatus }) => {
   const [activeTab, setActiveTab] = useState("button1");
 
   const handleButtonClick = (tab) => {
@@ -19,14 +20,14 @@ const ScreenRIA = ({ handleShowRecommStatus }) => {
               className={`button ${activeTab === "button1" ? "active" : ""}`}
               onClick={() => handleButtonClick("button1")}
             >
-              <span>Send Recommendations(RIA Screen)</span>
+              <span>Historical recos by date range</span>
               {/* <hr></hr> */}
             </button>
             <button
               className={`button ${activeTab === "button2" ? "active" : ""}`}
               onClick={() => handleButtonClick("button2")}
             >
-              <span>Send Recommendations(RA Screen)</span>
+              <span>Historical recos by client and date range</span>
 
               {/* <hr></hr> */}
             </button>
@@ -36,7 +37,7 @@ const ScreenRIA = ({ handleShowRecommStatus }) => {
 
         <div className="row">
           <div className="" style={{}}>
-            {activeTab === "button1" ? <RIAScreen handleShowRecommStatus={handleShowRecommStatus} /> : <RAScreen handleShowRecommStatus={handleShowRecommStatus} />}
+            {activeTab === "button1" ?<HtRecByDate/> : <HtRecByDateAndRange/>}
           </div>
         </div>
       </div>
@@ -44,4 +45,4 @@ const ScreenRIA = ({ handleShowRecommStatus }) => {
   );
 };
 
-export default ScreenRIA;
+export default ScreenDateAndClient;
